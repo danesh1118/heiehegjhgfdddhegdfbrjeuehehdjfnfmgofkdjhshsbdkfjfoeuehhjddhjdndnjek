@@ -314,26 +314,20 @@
 
     <script>
         const serverConfigs = [
-            "vless://c27538ca-d170-4182-87e5-aee87c8a0c4a@188.114.97.6:443?type=ws&security=tls&host=small-voice-c4c5.itsnewrzan.workers.dev&path=%2Fproxyip%3D40.233.87.120&sni=small-voice-c4c5.itsnewrzan.workers.dev#🇨🇦",
-            "vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@188.114.97.6:80?type=ws&security=none&host=de.vpnbase.net&path=%2Fhttp#🇩🇪",
-            "vless://20e295db-a6af-4006-bfd6-91453f169968@188.114.97.6:443?type=ws&security=tls&host=057.electrocellco-cf-057.workers.dev&path=%2FeyJqdW5rIjoiSFM1N0lLQmx2UU1qRzlnTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D&sni=057.ElecTRocElLco-Cf-057.wOrKeRs.dEv#🇩🇪",
-            "vless://627c3a7a-29a7-41d1-9d9e-9f809b690988@188.114.97.6:443?type=ws&security=tls&host=mos.rfiksma.top&path=%2F&sni=sub.rfiksma.top#🇩🇪",
-            "vless://e42eb18a-6620-49b2-a578-820da4adcee8@188.114.97.6:2096?type=ws&security=tls&host=cd.rxteamonbtop.qzz.io&path=%2FeyJqdW5rIjoia09KQkRyT1VnUDVHIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ%3D%3D%3Fed%3D2560&sni=cD.rXtEaMoNbToP.qZz.iO#🇬🇧",
-            "vless://7270612b-49f6-4b04-999c-34d8263da767@188.114.97.6:443?type=ws&security=tls&host=picassooo.info&path=%2Faymdlws&sni=picassooo.info#🇮🇱",
-            "vless://c648c6d0-4d3e-4f51-8ee6-4fcdbdddd684@188.114.97.6:2096?type=ws&security=tls&host=peekconfig.hamrahfree2.workers.dev&path=%2FeyJqdW5rIjoibTBZdXp5cm93NSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19%3Fed%3D2560&sni=PEekCoNFig.hAMRahfreE2.wORKERs.dEv#🇳🇱",
-            "vless://Shh-proxy@188.114.97.6:8880?type=ws&security=none&host=shhp.akbarjoojeh.shop&path=%2F---%40SHH_PROXY%2F---%40SHH_PROXY%2F---%40SHH_PROXY%2F---%40SHH_PROXY%2F---%40SHH_PROXY#🇸🇪",
-            "vless://70252937-5c61-4fb0-8656-d1a16261b795@188.114.97.6:2096?type=ws&security=tls&host=group.shalana.xyz&path=%2Fshalana&sni=group.shalana.xyz#🇸🇬",
-            "vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.97.6:443?type=ws&security=tls&host=hhlfy.twiladaphne.ndjp.net&path=%2F&sni=hhlfy.twiladaphne.ndjp.net#🇸🇬",
-            "vless://c2f0a8f0-36fe-4a94-824b-bca271ca642b@188.114.97.6:443?type=ws&security=tls&host=alphacdn.alphashops.shop&path=%2Fws&sni=alphacdn.alphashops.shop#🇹🇷",
-            "trojan://ppmk@188.114.97.6:8443?type=ws&security=tls&host=flat-firefly-6022.rixewi3168.workers.dev&path=%2F&sni=flat-firefly-6022.rixewi3168.workers.dev#🇺🇸",
-            "vless://1c9daf90-3950-44ac-b06f-4cf9aec63170@188.114.97.6:443?type=ws&security=tls&host=free.server14peekconfig.workers.dev&path=%2FeyJqdW5rIjoiQmFCblN3SmhXYTB3RzVoIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIiwiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0%3D%3Fed%3D2560&sni=FrEe.SeRVEr14peekCoNfIG.WoRKErS.dEV#🇺🇸",
-            "vless://8cf1e524-ce8c-4c63-8440-3ecd687f5e8d@188.114.97.6:2053?type=ws&security=tls&host=still-lake-3cf7.dls2026.workers.dev&path=%2F&sni=still-lake-3cf7.dls2026.workers.dev#🇺🇸",
-            "vmess://eyJhZGQiOiIxODguMTE0Ljk3LjYiLCJwb3J0IjoiNDQzIiwiaWQiOiI5NWQyYzQ2MS02MWY1LTRkYWUtYmM3NC00ZDEwY2UxZjYyMzYiLCJhaWQiOiIwIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiL3dzLWdvbmd5aSIsInRscyI6InRscyIsInNuaSI6Imdvbmd5aWxtLmRwZG5zLm9yZyJ9#🇺🇸"
+            "vless://14b59caf-a196-4ec2-8c70-c7b388062f5b@188.114.97.6:443?security=tls&alpn=&fp=&sni=vangoghhh.info&type=ws&path=/rdfgtws&host=vangoghhh.info#🇩🇪 Storm",
+            "vless://b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9@45.130.125.126:443?security=tls&alpn=http/1.1&fp=chrome&sni=BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv&type=ws&path=/eyJqdW5rIjoiY0U2T212Y21yeEhUZHRKYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560&host=BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv#🇩🇪 Storm",
+            "vless://b2f6aa3a-2550-4a1c-b2c0-1c94b1207217@188.114.97.6:443?security=tls&alpn=&fp=chrome&sni=terazhediii.info&type=ws&path=/hdgrbws&host=terazhediii.info#🇫🇮 Storm",
+            "trojan://humanity@45.130.125.126:443?security=tls&alpn=&fp=chrome&sni=www.multiplydose.com&type=ws&path=/assignment&host=www.multiplydose.com#🇫🇷 Storm",
+            "vless://69330ab9-eb51-4bb6-9c07-3f2401c476af@188.114.97.6:80?security=none&type=ws&path=/stream&host=panel.dibaux.ir#🇳🇱 Storm",
+            "vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.16.72.251:443?security=tls&alpn=&fp=random&sni=hhlfy.twiladaphne.ndjp.net&type=ws&path=/&host=hhlfy.twiladaphne.ndjp.net#🇸🇬 Storm",
+            "vless://c2f0a8f0-36fe-4a94-824b-bca271ca642b@188.114.97.6:443?security=tls&alpn=&fp=chrome&sni=alphacdn.alphashops.shop&type=ws&path=/ws&host=alphacdn.alphashops.shop#🇹🇷 Storm",
+            "vless://e1ebbd5e-ba89-4b05-8336-de7834d14164@45.130.125.126:443?security=tls&alpn=&fp=chrome&sni=amirsa.pages.dev&type=ws&path=/&host=amirsa.pages.dev#🇺🇸 Storm",
+            "vless://7c699f4c-f2bd-4393-a832-cf772c67e7f5@104.16.72.251:2096?security=tls&alpn=http/1.1&fp=chrome&sni=mORNINg-BAnD-57cb.RezameYhaMI0.wORKeRs.Dev&type=ws&path=/eyJqdW5rIjoiVkxNSDlwTGlBdWxMQjAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=?ed=2560&host=morning-band-57cb.rezameyhami0.workers.dev#🇺🇸 Storm"
         ];
 
-        const countryEmojis = ["🇨🇦","🇩🇪","🇩🇪","🇩🇪","🇬🇧","🇮🇱","🇳🇱","🇸🇪","🇸🇬","🇸🇬","🇹🇷","🇺🇸","🇺🇸","🇺🇸","🇺🇸"];
+        const countryEmojis = ["🇩🇪","🇩🇪","🇫🇮","🇫🇷","🇳🇱","🇸🇬","🇹🇷","🇺🇸","🇺🇸"];
 
-        const START_TIME = Date.parse('2026-06-12T13:20:00Z');
+        const START_TIME = Date.parse('2026-05-27T07:40:00Z');
         const PERIOD_MS = 7 * 24 * 60 * 60 * 1000;
         const MAX_VOLUME_GB = 50000;
 
@@ -387,7 +381,7 @@
         }
 
         function copySubLink() {
-            const subLink = "https://raw.githubusercontent.com/danesh1118/gwiwgwfgdjdgeiy86wgdbdow6tebdieggohekwbdbmcnxmdkdiegeh5w/refs/heads/main/sub";
+            const subLink = "https://raw.githubusercontent.com/danesh1118/iebeidbduegs73jdosgdie736tvideqnspsmdoehe379ejssy/refs/heads/main/sub.txt";
             navigator.clipboard.writeText(subLink).then(() => {
                 alert('لینک سابسکریپشن کپی شد!');
             }).catch(() => {
@@ -445,7 +439,7 @@
 
                 <div class="card">
                     <h3>سرعت متوسط</h3>
-                    <div class="value">105 Mbps</div>
+                    <div class="value">109 Mbps</div>
                     <div class="subtext">24 ساعت گذشته</div>
                 </div>
             </div>
@@ -480,21 +474,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>کانادا VIP</td><td><img src="https://flagcdn.com/ca.svg" class="flag"> کانادا</td><td>110 ms</td><td>25%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(0)">کپی لینک</button></td></tr>
-                            <tr><td>آلمان VIP ۱</td><td><img src="https://flagcdn.com/de.svg" class="flag"> آلمان</td><td>55 ms</td><td>20%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(1)">کپی لینک</button></td></tr>
-                            <tr><td>آلمان VIP ۲</td><td><img src="https://flagcdn.com/de.svg" class="flag"> آلمان</td><td>48 ms</td><td>18%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(2)">کپی لینک</button></td></tr>
-                            <tr><td>آلمان VIP ۳</td><td><img src="https://flagcdn.com/de.svg" class="flag"> آلمان</td><td>52 ms</td><td>19%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(3)">کپی لینک</button></td></tr>
-                            <tr><td>انگلیس VIP</td><td><img src="https://flagcdn.com/gb.svg" class="flag"> انگلیس</td><td>85 ms</td><td>28%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(4)">کپی لینک</button></td></tr>
-                            <tr><td>اسرائیل VIP</td><td><img src="https://flagcdn.com/il.svg" class="flag"> اسرائیل</td><td>130 ms</td><td>35%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(5)">کپی لینک</button></td></tr>
-                            <tr><td>هلند VIP</td><td><img src="https://flagcdn.com/nl.svg" class="flag"> هلند</td><td>70 ms</td><td>24%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(6)">کپی لینک</button></td></tr>
-                            <tr><td>سوئد VIP</td><td><img src="https://flagcdn.com/se.svg" class="flag"> سوئد</td><td>95 ms</td><td>30%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(7)">کپی لینک</button></td></tr>
-                            <tr><td>سنگاپور VIP ۱</td><td><img src="https://flagcdn.com/sg.svg" class="flag"> سنگاپور</td><td>120 ms</td><td>32%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(8)">کپی لینک</button></td></tr>
-                            <tr><td>سنگاپور VIP ۲</td><td><img src="https://flagcdn.com/sg.svg" class="flag"> سنگاپور</td><td>115 ms</td><td>31%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(9)">کپی لینک</button></td></tr>
-                            <tr><td>ترکیه VIP</td><td><img src="https://flagcdn.com/tr.svg" class="flag"> ترکیه</td><td>80 ms</td><td>26%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(10)">کپی لینک</button></td></tr>
-                            <tr><td>آمریکا VIP ۱</td><td><img src="https://flagcdn.com/us.svg" class="flag"> آمریکا</td><td>150 ms</td><td>38%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(11)">کپی لینک</button></td></tr>
-                            <tr><td>آمریکا VIP ۲</td><td><img src="https://flagcdn.com/us.svg" class="flag"> آمریکا</td><td>145 ms</td><td>37%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(12)">کپی لینک</button></td></tr>
-                            <tr><td>آمریکا VIP ۳</td><td><img src="https://flagcdn.com/us.svg" class="flag"> آمریکا</td><td>155 ms</td><td>39%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(13)">کپی لینک</button></td></tr>
-                            <tr><td>آمریکا VIP ۴</td><td><img src="https://flagcdn.com/us.svg" class="flag"> آمریکا</td><td>148 ms</td><td>38%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(14)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۱</td><td><img src="https://flagcdn.com/de.svg" class="flag"> آلمان</td><td>50 ms</td><td>20%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(0)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۲</td><td><img src="https://flagcdn.com/de.svg" class="flag"> آلمان</td><td>48 ms</td><td>19%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(1)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۳</td><td><img src="https://flagcdn.com/fi.svg" class="flag"> فنلاند</td><td>95 ms</td><td>28%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(2)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۴</td><td><img src="https://flagcdn.com/fr.svg" class="flag"> فرانسه</td><td>85 ms</td><td>25%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(3)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۵</td><td><img src="https://flagcdn.com/nl.svg" class="flag"> هلند</td><td>70 ms</td><td>24%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(4)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۶</td><td><img src="https://flagcdn.com/sg.svg" class="flag"> سنگاپور</td><td>120 ms</td><td>32%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(5)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۷</td><td><img src="https://flagcdn.com/tr.svg" class="flag"> ترکیه</td><td>80 ms</td><td>26%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(6)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۸</td><td><img src="https://flagcdn.com/us.svg" class="flag"> آمریکا</td><td>140 ms</td><td>35%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(7)">کپی لینک</button></td></tr>
+                            <tr><td>Storm ۹</td><td><img src="https://flagcdn.com/us.svg" class="flag"> آمریکا</td><td>145 ms</td><td>36%</td><td><span class="status-active">فعال</span></td><td><button class="copy-btn" onclick="copyConfig(8)">کپی لینک</button></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -506,4 +494,4 @@
         </footer>
     </div>
 </body>
-                                                            </html>
+                                               </html>
